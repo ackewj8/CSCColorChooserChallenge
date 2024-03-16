@@ -32,6 +32,7 @@ public class CSCColorChooserChallengeController implements Initializable {
     private int blue = 0;
     private double alpha = 1.0;
     private static final int INIT_VALUE = 0;
+    private static final double ALPHA_VALUE = 1;
 
     public void initialize(URL location, ResourceBundle resources) {
         redSlider.setValue(INIT_VALUE);
@@ -49,7 +50,7 @@ public class CSCColorChooserChallengeController implements Initializable {
         blueTextField.textProperty().bindBidirectional(
                 blueSlider.valueProperty(), NumberFormat.getNumberInstance());
 
-        alphaSlider.setValue(INIT_VALUE);
+        alphaSlider.setValue(ALPHA_VALUE);
         alphaTextField.setText(new Double(INIT_VALUE).toString());
         alphaTextField.textProperty().bindBidirectional(
                 alphaSlider.valueProperty(), NumberFormat.getNumberInstance());
